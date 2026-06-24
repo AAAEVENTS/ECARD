@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Susham S - AAA Services Trading LLC</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #ffffff 0%, #eeeeee 45%, #dcdcdc 100%);
+  color: #111111;
+}
+
+.wrapper {
+  width: 430px;
+  max-width: 100%;
+  margin: auto;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(0,0,0,0.12);
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  background: #0c0c0c;
+  color: #ffffff;
+  padding: 24px 22px 75px;
+  overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: -80px;
+  right: -80px;
+  bottom: -45px;
+  height: 110px;
+  background: linear-gradient(90deg, #f6c400, #ffd94d);
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+
+.aaa-title {
+  color: #f6c400;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 0.9;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.company-address {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 18px;
+}
+
+.logo-round {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  z-index: 5;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* PROFILE */
+.profile-card {
+  position: relative;
+  z-index: 3;
+  background: #ffffff;
+  margin: -38px 14px 0;
+  padding: 0 18px 28px;
+  border-radius: 24px 24px 0 0;
+}
+
+.profile-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid #ffffff;
+  outline: 5px solid #f6c400;
+  background: #dddddd;
+}
+
+.person-name {
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.designation {
+  font-size: 19px;
+  font-weight: 900;
+  margin-top: 12px;
+}
+
+.region {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 8px 14px;
+  border: 2px solid #f6c400;
+  border-radius: 30px;
+  background: #fff8d6;
+  font-size: 14px;
+}
+
+/* PREMIUM GLOBAL PRESENCE */
+.presence-wrap {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.presence-label {
+  display: inline-block;
+  background: #111111;
+  color: #f6c400;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  padding: 7px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.presence {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.presence span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff6c7 100%);
+  border: 1.6px solid #f6c400;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.10);
+}
+
+.presence span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: #f6c400;
+  border-radius: 50%;
+  margin-right: 7px;
+  box-shadow: 0 0 0 2px rgba(246,196,0,0.20);
+}
+
+/* CEO CONTACT CARDS */
+.contact-box {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 0 4px;
+}
+
+.contact-item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 82px;
+  padding: 16px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+  min-width: 0;
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 13px;
+  background: #111111;
+  color: #f6c400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.contact-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+}
+
+.contact-text {
+  border-left: 2px solid #f6c400;
+  padding-left: 14px;
+  min-width: 0;
+}
+
+.contact-text span {
+  display: block;
+  font-size: 11px;
+  color: #666666;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 5px;
+}
+
+.contact-text strong {
+  display: block;
+  font-size: 15.5px;
+  color: #111111;
+  font-weight: 900;
+  line-height: 1.3;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* INNOVATE + QR */
+.innovate-qr {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.innovate {
+  border-right: none;
+  padding-right: 0;
+  text-align: center;
+}
+
+.innovate h2 {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.yellow-line {
+  width: 70px;
+  height: 5px;
+  background: #f6c400;
+  margin: 14px auto 18px;
+  border-radius: 10px;
+}
+
+.innovate p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.service-pill {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 2px solid #f6c400;
+  border-radius: 25px;
+  font-size: 13px;
+  background: #fffdf0;
+  line-height: 1.5;
+}
+
+.qr-box {
+  max-width: 270px;
+  margin: auto;
+  background: #111111;
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
+}
+
+.qr-box img {
+  width: 170px;
+  height: 170px;
+  background: #ffffff;
+  padding: 8px;
+}
+
+.qr-title {
+  color: #f6c400;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 12px;
+}
+
+.qr-subtitle {
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.save-contact-btn {
+  width: 100%;
+  margin-top: 15px;
+  background: #f6c400;
+  color: #111111;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 10px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* BLACK FOOTER */
+.black-footer {
+  background: #111111;
+  color: #ffffff;
+  padding: 22px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  text-align: center;
+  border-bottom: 7px solid #f6c400;
+}
+
+.footer-company {
+  color: #f6c400;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.footer-location,
+.footer-region {
+  font-size: 15px;
+}
+
+/* SOCIAL */
+.social-icons {
+  margin: 28px 22px;
+  padding: 24px 0;
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 50%;
+  background: #111111;
+  color: #f6c400;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.social-icons a img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+}
+
+/* SECTIONS */
+.section {
+  padding: 0 22px 32px;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.specialist-section {
+  padding: 34px 14px 38px;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+}
+
+.specialist-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.specialist-title span {
+  flex: 1;
+  max-width: 70px;
+  height: 3px;
+  background: #f6c400;
+  position: relative;
+}
+
+.specialist-title span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #111111;
+  border-radius: 50%;
+  position: absolute;
+  top: -3.5px;
+  right: -5px;
+}
+
+.specialist-title h2 {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  margin: 0;
+  color: #111111;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.10);
+}
+
+.specialist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.specialist-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.16);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.specialist-icon {
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #111111;
+  color: #f6c400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.specialist-card h3 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.small-line {
+  width: 38px;
+  height: 3px;
+  background: #f6c400;
+  margin: 0 auto 14px;
+  border-radius: 10px;
+}
+
+.specialist-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  display: block;
+  background: #ffffff;
+}
+
+/* HR */
+.hr-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  gap: 20px;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 22px;
+  border-radius: 14px;
+}
+
+.hr-icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background: #111111;
+  color: #f6c400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.hr-box h2 {
+  font-size: 30px;
+}
+
+/* QUERY FOOTER */
+.query-footer {
+  margin: 0 22px 35px;
+  padding: 0;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+.query-footer > div:first-child {
+  padding: 26px 22px;
+  background: #ffffff;
+}
+
+.query-footer h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.query-footer input,
+.query-footer textarea {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  background: #fafafa;
+  outline: none;
+}
+
+.query-footer input:focus,
+.query-footer textarea:focus {
+  border-color: #f6c400;
+  background: #ffffff;
+}
+
+.query-footer textarea {
+  height: 110px;
+  resize: none;
+}
+
+.send-btn {
+  width: 160px;
+  background: #f6c400;
+  color: #111111;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(246,196,0,0.35);
+}
+
+.vertical-line {
+  display: none;
+}
+
+.footer-info {
+  background: #111111;
+  color: #ffffff;
+  padding: 28px 22px;
+  position: relative;
+}
+
+.footer-info::before {
+  content: "";
+  width: 70px;
+  height: 5px;
+  background: #f6c400;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.footer-info h2 {
+  color: #f6c400;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.footer-address {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.footer-contact-list {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+}
+
+.footer-contact-list div {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.division-box {
+  margin: 20px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 340px;
+}
+
+.division-box span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #111111;
+  color: #f6c400;
+  border: 1.5px solid #f6c400;
+  border-radius: 22px;
+  padding: 8px 11px;
+  font-size: 11.5px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.13);
+}
+
+.qr-box {
+  max-width: 270px;
+  margin: 4px auto 0;
+  background: #111111;
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+.footer-region {
+  font-weight: 800;
+  letter-spacing: 0.25px;
+}
+
+@media (max-width: 430px) {
+  .presence {
+    gap: 7px;
+  }
+
+  .presence span {
+    padding: 7px 10px;
+    font-size: 11.5px;
+  }
+
+  .social-icons {
+    gap: 14px;
+  }
+}
+
+/* Keep same mobile-card layout on desktop */
+@media (min-width: 701px) {
+  body {
+    background: #eeeeee;
+  }
+
+  .wrapper {
+    width: 430px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.08);
+  }
+}
+
+
+/* ===============================
+   LAPTOP / DESKTOP VIEW ONLY
+   Mobile view remains unchanged.
+   =============================== */
+@media (min-width: 900px) {
+  body {
+    background: radial-gradient(circle at top, #ffffff 0%, #eeeeee 45%, #dcdcdc 100%);
+    padding: 28px 0;
+  }
+
+  .wrapper {
+    width: 1180px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    border-radius: 28px;
+    box-shadow: 0 22px 70px rgba(0,0,0,0.16);
+  }
+
+  .header {
+    padding: 34px 52px 95px;
+  }
+
+  .header::after {
+    bottom: -58px;
+    height: 135px;
+    transform: rotate(-3deg);
+  }
+
+  .aaa-title {
+    font-size: 72px;
+  }
+
+  .company-name {
+    font-size: 25px;
+  }
+
+  .company-address {
+    font-size: 18px;
+  }
+
+  .logo-round {
+    top: 36px;
+    right: 52px;
+    width: 112px;
+    height: 112px;
+  }
+
+  .profile-card {
+    margin: -52px 44px 0;
+    padding: 0 42px 42px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .profile-top {
+    grid-template-columns: 260px 1fr;
+    text-align: left;
+    gap: 36px;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+    margin: 0;
+  }
+
+  .person-name {
+    font-size: 56px;
+  }
+
+  .designation {
+    font-size: 23px;
+  }
+
+  .presence-wrap {
+    text-align: left;
+  }
+
+  .presence {
+    justify-content: flex-start;
+  }
+
+  .presence span {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+
+  .contact-box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .contact-item {
+    align-items: flex-start;
+    min-height: 118px;
+    padding: 18px;
+    flex-direction: column;
+  }
+
+  .contact-text {
+    border-left: none;
+    border-top: 2px solid #f6c400;
+    padding-left: 0;
+    padding-top: 12px;
+    width: 100%;
+  }
+
+  .contact-text strong {
+    font-size: 16px;
+  }
+
+  .innovate-qr {
+    grid-template-columns: 1.5fr 340px;
+    gap: 44px;
+    margin-top: 44px;
+  }
+
+  .innovate {
+    text-align: left;
+    border-right: 2px solid rgba(0,0,0,0.08);
+    padding-right: 38px;
+  }
+
+  .innovate h2 {
+    font-size: 44px;
+  }
+
+  .yellow-line {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .division-box {
+    justify-content: flex-start;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .qr-box {
+    max-width: 310px;
+    margin: 0 auto;
+  }
+
+  .qr-box img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .black-footer {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    text-align: left;
+    padding: 26px 52px;
+  }
+
+  .footer-region {
+    text-align: right;
+  }
+
+  .social-icons {
+    margin: 32px 52px;
+  }
+
+  .section {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+
+  .specialist-section {
+    padding: 44px 52px 52px;
+  }
+
+  .specialist-title h2 {
+    font-size: 34px;
+  }
+
+  .specialist-title span {
+    max-width: 160px;
+  }
+
+  .specialist-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+  }
+
+  .specialist-card img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .hr-box {
+    text-align: left;
+    padding: 34px 42px;
+  }
+
+  .hr-box h2 {
+    font-size: 36px;
+  }
+
+  .query-footer {
+    margin: 0 52px 48px;
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .query-footer > div:first-child {
+    padding: 34px 36px;
+  }
+
+  .footer-info {
+    padding: 36px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .wrapper {
+    width: 960px;
+  }
+
+  .contact-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+    min-height: 92px;
+  }
+
+  .contact-text {
+    border-top: none;
+    border-left: 2px solid #f6c400;
+    padding-top: 0;
+    padding-left: 14px;
+  }
+
+  .specialist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+/* ===============================
+   REFINED LAPTOP / DESKTOP FIT
+   More professional spacing, matched card sizes,
+   and one-line highlighted core divisions.
+   =============================== */
+@media (min-width: 1024px) {
+  .wrapper {
+    width: min(1380px, calc(100% - 40px));
+    border-radius: 30px;
+  }
+
+  .profile-card {
+    margin: -56px 34px 0;
+    padding: 0 34px 44px;
+  }
+
+  .contact-box {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .contact-item {
+    min-height: 150px;
+    padding: 20px 22px;
+    border-radius: 22px;
+    justify-content: flex-start;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08), 0 0 0 1px rgba(246,196,0,0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(0,0,0,0.12), 0 0 0 1px rgba(246,196,0,0.24), 0 0 18px rgba(246,196,0,0.15);
+  }
+
+  .contact-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 16px;
+    box-shadow: 0 0 14px rgba(246,196,0,0.18);
+  }
+
+  .contact-icon img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .contact-text {
+    padding-top: 14px;
+  }
+
+  .contact-text span {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+  }
+
+  .contact-text strong {
+    font-size: 16px;
+    line-height: 1.32;
+    overflow-wrap: anywhere;
+  }
+
+  .specialist-section {
+    padding: 48px 36px 54px;
+  }
+
+  .specialist-title {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .specialist-title span {
+    max-width: 170px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(246,196,0,0.15), #f6c400, rgba(246,196,0,0.15));
+    box-shadow: 0 0 12px rgba(246,196,0,0.45);
+  }
+
+  .specialist-title span::after {
+    background: #111111;
+    box-shadow: 0 0 0 3px rgba(246,196,0,0.18);
+  }
+
+  .specialist-title h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 14px rgba(246,196,0,0.22);
+  }
+
+  .specialist-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .specialist-card {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 0 0 1px rgba(246,196,0,0.16), 0 0 22px rgba(246,196,0,0.08);
+    position: relative;
+  }
+
+  .specialist-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    pointer-events: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), inset 0 0 0 1px rgba(246,196,0,0.08);
+  }
+
+  .specialist-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1260px) {
+  .wrapper {
+    width: min(1220px, calc(100% - 28px));
+  }
+
+  .contact-box {
+    gap: 16px;
+  }
+
+  .contact-item {
+    min-height: 142px;
+    padding: 18px;
+  }
+
+  .contact-text strong {
+    font-size: 15px;
+  }
+
+  .specialist-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .specialist-card img {
+    height: 190px;
+  }
+}
+
+
+
+/* ===============================
+   CORE DIVISIONS - PREMIUM REWORK
+   Professional laptop layout.
+   Mobile base remains unchanged.
+   =============================== */
+@media (min-width: 900px) {
+  .specialist-section {
+    margin: 0;
+    padding: 56px 48px 64px;
+    background:
+      radial-gradient(circle at top center, rgba(246,196,0,0.18) 0%, rgba(246,196,0,0.04) 34%, transparent 62%),
+      linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .specialist-section::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: min(780px, 84%);
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.18), transparent);
+  }
+
+  .specialist-title {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    margin: 0 auto 34px;
+    padding: 11px 30px;
+    border-radius: 999px;
+    background:
+      linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(90deg, rgba(246,196,0,0.15), #f6c400, rgba(246,196,0,0.15)) border-box;
+    border: 1px solid transparent;
+    box-shadow:
+      0 14px 35px rgba(0,0,0,0.10),
+      0 0 28px rgba(246,196,0,0.28);
+  }
+
+  .specialist-title h2 {
+    font-size: clamp(28px, 3.1vw, 42px);
+    letter-spacing: 2.8px;
+    line-height: 1;
+    color: #0b0b0b;
+    text-shadow:
+      0 1px 0 #ffffff,
+      0 0 18px rgba(246,196,0,0.30);
+  }
+
+  .specialist-title span {
+    width: clamp(70px, 11vw, 190px);
+    max-width: none;
+    flex: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f6c400, transparent);
+    box-shadow: 0 0 14px rgba(246,196,0,0.55);
+  }
+
+  .specialist-title span::after {
+    width: 8px;
+    height: 8px;
+    top: -3px;
+    right: -4px;
+    background: #111111;
+    box-shadow: 0 0 0 4px rgba(246,196,0,0.18), 0 0 12px rgba(246,196,0,0.55);
+  }
+
+  .specialist-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .specialist-card {
+    height: 230px;
+    border-radius: 24px;
+    padding: 10px;
+    background:
+      linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(145deg, rgba(246,196,0,0.95), rgba(255,255,255,0.45), rgba(17,17,17,0.20)) border-box;
+    border: 1px solid transparent;
+    box-shadow:
+      0 18px 36px rgba(0,0,0,0.14),
+      0 0 0 1px rgba(246,196,0,0.12),
+      0 0 24px rgba(246,196,0,0.12);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .specialist-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 24px 44px rgba(0,0,0,0.18),
+      0 0 0 1px rgba(246,196,0,0.28),
+      0 0 32px rgba(246,196,0,0.24);
+  }
+
+  .specialist-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 18px;
+    background: #ffffff;
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .specialist-grid {
+    grid-template-columns: repeat(5, minmax(190px, 1fr));
+    gap: 22px;
+  }
+
+  .specialist-card {
+    height: 275px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .specialist-section {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .specialist-grid {
+    grid-template-columns: repeat(3, minmax(210px, 1fr));
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .specialist-card {
+    height: 260px;
+  }
+
+  .specialist-card:nth-child(4) {
+    grid-column: 1 / 2;
+  }
+
+  .specialist-card:nth-child(5) {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+  .specialist-section {
+    padding: 44px 30px 52px;
+  }
+
+  .specialist-title h2 {
+    font-size: 30px;
+  }
+
+  .specialist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .specialist-card {
+    height: 260px;
+    border-radius: 24px;
+    padding: 10px;
+  }
+
+  .specialist-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 18px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="header">
+    <div class="aaa-title">AAA</div>
+    <div class="company-name">SERVICES TRADING LLC</div>
+    <div class="company-address">
+      PC 322, Post Box 607<br>
+      Falaj Al Qabail, Sohar<br>
+      Sultanate of Oman
+    </div>
+    <img src="aaa-logo.jpeg" class="logo-round" alt="AAA Logo">
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-top">
+      <div>
+        <img src="susham-photo.jpeg" class="profile-photo" alt="Susham S">
+      </div>
+
+      <div>
+        <div class="person-name">Susham S</div>
+        <div class="designation">HEAD CONSORT | AAA GROUP</div>
+        <div class="presence-wrap">
+          <div class="presence-label">GLOBAL PRESENCE</div>
+          <div class="presence">
+            <span>Oman</span>
+            <span>India</span>
+            <span>UAE</span>
+            <span>Saudi</span>
+            <span>Europe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <a class="contact-item" href="tel:+96894369437">
+        <div class="contact-icon">☎</div>
+        <div class="contact-text">
+          <span>Contact Number</span>
+          <strong>+968 94369437</strong>
+        </div>
+      </a>
+
+      <a class="contact-item" href="mailto:susham@aaaserves.com">
+        <div class="contact-icon">
+          <img src="email-icon.png" alt="Email Icon">
+        </div>
+        <div class="contact-text">
+          <span>Email</span>
+          <strong>susham@aaaserves.com</strong>
+        </div>
+      </a>
+
+      <a class="contact-item" href="mailto:aaa@aaaserves.com">
+        <div class="contact-icon">
+          <img src="general-enquiry-icon.png" alt="General Enquiry Icon">
+        </div>
+        <div class="contact-text">
+          <span>General Enquiry</span>
+          <strong>aaa@aaaserves.com</strong>
+        </div>
+      </a>
+
+      <a class="contact-item" href="https://www.aaaserves.com">
+        <div class="contact-icon">
+          <img src="website-icon.jpg" alt="Website Icon">
+        </div>
+        <div class="contact-text">
+          <span>Website</span>
+          <strong>www.aaaserves.com</strong>
+        </div>
+      </a>
+    </div>
+
+    <div class="innovate-qr">
+      <div class="innovate">
+        <h2>We Lead with Excellence</h2>
+        <div class="yellow-line"></div>
+        <p>
+          Driving AAA Group with a clear vision for industrial growth, engineering excellence,
+          overhead crane solutions, construction chemicals, and professional human resource services.
+        </p>
+        <div class="division-box">
+          <span>Industrial Supplies</span>
+          <span>Cranes</span>
+          <span>Engineering</span>
+          <span>Construction Chemicals</span>
+          <span>HR</span>
+        </div>
+      </div>
+
+      <div class="qr-box">
+        <img src="qr-code.jpeg?v=20260622" alt="Scan Profile QR">
+        <div class="qr-title">SCAN PROFILE</div>
+        <div class="qr-subtitle">Save contact / visit</div>
+        <button class="save-contact-btn" onclick="saveContact()">⇩ SAVE CONTACT</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="black-footer">
+    <div>
+      <div class="footer-company">AAA Services Trading LLC</div>
+      <div class="footer-location">Falaj Al Qabail, Sohar | Sultanate of Oman</div>
+    </div>
+    <div class="footer-region"><strong>Oman • India • UAE • Saudi • Europe</strong></div>
+  </div>
+  <div class="social-icons">
+    <a href="tel:+96894369437" title="Call">☎</a>
+    <a href="https://www.aaaserves.com" title="Website">
+      <img src="website-icon.jpg" alt="Website">
+    </a>
+    <a href="mailto:susham@aaaserves.com" title="Email">
+      <img src="email-icon.png" alt="Email">
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=96894369437" title="WhatsApp">
+      <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
+  </div>
+
+  <div class="section specialist-section">
+
+    <div class="specialist-title">
+      <span></span>
+      <h2>CORE DIVISIONS</h2>
+      <span></span>
+    </div>
+
+    <div class="specialist-grid">
+
+      <div class="specialist-card">
+        <img src="industrial-supplies.png" alt="Industrial Supplies">
+      </div>
+
+      <div class="specialist-card">
+        <img src="overhead-cranes.png" alt="Overhead Cranes">
+      </div>
+
+      <div class="specialist-card">
+        <img src="engineering-division.png" alt="Engineering Division">
+      </div>
+
+      <div class="specialist-card">
+        <img src="construction-chemicals.png" alt="Construction Chemicals">
+      </div>
+
+      <div class="specialist-card">
+        <img src="human-resources.png" alt="Human Resources">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="hr-box">
+      <div>
+        <h2>About AAA Group :</h2>
+        <p>
+          <strong>AAA Group</strong> of Companies is a trusted multi-division organization delivering reliable industrial, engineering,
+          crane, construction chemical, and human resource solutions. With a strong presence across <strong>Oman, India,
+          UAE, Saudi, and Europe</strong>, AAA Group is committed to quality service, timely delivery, professional execution,
+          and long-term customer satisfaction.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="query-footer">
+    <div>
+      <h2>Have a query.</h2>
+      <form onsubmit="sendQuery(event)">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Message" required></textarea>
+        <button class="send-btn" type="submit">➤ SEND</button>
+      </form>
+    </div>
+
+    <div class="footer-info">
+      <h2>AAA Services Trading LLC</h2>
+
+      <p class="footer-address">
+        PC 322, Post Box 607<br>
+        Falaj Al Qabail, Sohar<br>
+        Sultanate of Oman
+      </p>
+
+      <div class="footer-contact-list">
+        <div>🌐 www.aaaserves.com</div>
+        <div>✉ aaa@aaaserves.com</div>
+        <div>☎ +968 93822077</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function saveContact() {
+  const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Susham S
+N:Susham;S;;;
+ORG:AAA Group
+TITLE:HEAD CONSORT
+TEL;TYPE=CELL:+96894369437
+TEL;TYPE=WORK:+96893822077
+EMAIL;TYPE=WORK:susham@aaaserves.com
+EMAIL;TYPE=INTERNET:aaa@aaaserves.com
+URL:https://aaarontec.com/susham/
+ADR;TYPE=WORK:;;PC 322, Post Box 607, Falaj Al Qabail;Sohar;;Sultanate of Oman
+NOTE:AAA Services Trading LLC - Oman | India | UAE | Saudi | Europe
+END:VCARD`;
+
+  const blob = new Blob([vCardData], { type: "text/vcard;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "Susham_S_AAA_Group.vcf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  URL.revokeObjectURL(url);
+}
+
+function sendQuery(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const subject = encodeURIComponent("Website Query - Susham Profile");
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n\n" +
+    "Message:\n" + message
+  );
+
+  window.location.href = "mailto:aaa@aaaserves.com?subject=" + subject + "&body=" + body;
+}
+</script>
+
+</body>
+</html>
